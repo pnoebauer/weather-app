@@ -4,8 +4,9 @@ import {
   Text,
   KeyboardAvoidingView,
   Platform,
-  TextInput,
 } from 'react-native';
+
+import SearchInput from './components/SearchInput';
 
 export default class App extends React.Component {
   render() {
@@ -15,17 +16,14 @@ export default class App extends React.Component {
         <Text style={[styles.smallText, styles.textStyle]}>Sunny</Text>
         <Text style={[styles.largeText, styles.textStyle]}>25°</Text>
 
-        <TextInput
-          autoCorrect={false}
-          placeholder="Search any city"
-          placeholderTextColor="white"
-          style={styles.textInput}
-          clearButtonMode="always"
+        <SearchInput
+          placeholder={'Search any city'}
         />
       </KeyboardAvoidingView>
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -42,15 +40,5 @@ const styles = StyleSheet.create({
   },
   smallText: {
     fontSize: 18,
-  },
-  textInput: {
-    backgroundColor: '#666',
-    color: 'white',
-    height: 40,
-    width: 300,
-    marginTop: 20,
-    marginHorizontal: 20,
-    paddingHorizontal: 10,
-    alignSelf: 'center',
   },
 });
