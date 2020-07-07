@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
   	},
   	textInput: {
     	flex: 1,
-    	width: 300,
     	color: 'white',
   	},
 });
